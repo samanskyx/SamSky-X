@@ -1,14 +1,56 @@
 <!DOCTYPE html>
-<html>
+<html lang="fa">
 <head>
   <meta charset="UTF-8">
-  <title>??? ?????</title>
+  <title>🎶 هدیه خاص</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #f8cdda, #1d2b64);
+      font-family: "Tahoma", sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      color: white;
+      text-align: center;
+    }
+    .player {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+      width: 300px;
+    }
+    .cover {
+      width: 100%;
+      border-radius: 15px;
+      margin-bottom: 20px;
+    }
+    audio {
+      width: 100%;
+      outline: none;
+    }
+    .message {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+      line-height: 1.5;
+    }
+  </style>
 </head>
 <body>
-  <h2>??? ???? ?????</h2>
-  <audio controls>
-    <source src="music.mp3" type="audio/mpeg">
-    ?????? ??? ?? ??? ????? ???????? ???????.
-  </audio>
+  <div class="player">
+    <img src="cover.jpg" alt="کاور موزیک" class="cover">
+    <h2>🎧 موزیک من</h2>
+    <audio controls>
+      <source src="music.mp3" type="audio/mpeg">
+      مرورگر شما از پخش موزیک پشتیبانی نمی‌کند.
+    </audio>
+    <div class="message">
+      💖 این آهنگ رو با تمام وجودم تقدیمت می‌کنم  
+      امیدوارم هر بار که می‌شنوی، یاد من بیفتی 🌹
+    </div>
+  </div>
 </body>
 </html>

@@ -17,25 +17,18 @@
       font-family: sans-serif;
     }
     .cover {
-      width: 80vmin;   /* همیشه متناسب با صفحه */
-      height: 80vmin;
-      border-radius: 50%; /* دایره‌ای */
-      overflow: hidden;
-      animation: spin 20s linear infinite; /* چرخش آهسته */
-      box-shadow: 0 0 40px rgba(255,255,255,0.3);
+      width: 90%;           /* تقریبا تمام عرض صفحه */
+      max-width: 800px;     /* روی دسکتاپ خیلی بزرگ نشه */
+      box-shadow: 0 0 40px rgba(255,255,255,0.2);
     }
     .cover img {
       width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    @keyframes spin {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
+      height: auto;
+      display: block;
     }
     audio {
       margin-top: 20px;
-      width: 80%;
+      width: 90%;
       max-width: 400px;
     }
   </style>

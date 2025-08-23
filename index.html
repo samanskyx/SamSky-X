@@ -3,33 +3,55 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Music Player</title>
+  <title>Spotify Style Player</title>
   <style>
     body {
       margin: 0;
-      background: #000;
+      background: #121212;
+      color: #fff;
+      font-family: sans-serif;
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
-      height: 100vh;
-      color: white;
-      font-family: sans-serif;
+      min-height: 100vh;
     }
     .cover {
-      width: 90%;           /* تقریبا تمام عرض صفحه */
-      max-width: 800px;     /* روی دسکتاپ خیلی بزرگ نشه */
-      box-shadow: 0 0 40px rgba(255,255,255,0.2);
+      width: 100%;
+      max-width: 600px;
+      margin-top: 20px;
+      box-shadow: 0 0 30px rgba(0,0,0,0.6);
     }
     .cover img {
       width: 100%;
       height: auto;
       display: block;
     }
-    audio {
-      margin-top: 20px;
+    .info {
+      text-align: center;
+      margin: 15px 0;
+    }
+    .info h2 {
+      margin: 0;
+      font-size: 1.5rem;
+    }
+    .info p {
+      margin: 5px 0 0;
+      font-size: 1rem;
+      color: #aaa;
+    }
+    .player {
       width: 90%;
-      max-width: 400px;
+      max-width: 500px;
+      margin-top: auto;
+      margin-bottom: 30px;
+      background: #181818;
+      border-radius: 12px;
+      padding: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    }
+    .player audio {
+      width: 100%;
+      outline: none;
     }
   </style>
 </head>
@@ -37,9 +59,15 @@
   <div class="cover">
     <img src="cover.jpg" alt="Album Cover">
   </div>
-  <audio controls>
-    <source src="music.mp3" type="audio/mpeg">
-    مرورگر شما از پخش موزیک پشتیبانی نمی‌کند.
-  </audio>
+  <div class="info">
+    <h2>اسم آهنگ</h2>
+    <p>نام آرتیست</p>
+  </div>
+  <div class="player">
+    <audio controls>
+      <source src="music.mp3" type="audio/mpeg">
+      مرورگر شما از پخش موزیک پشتیبانی نمی‌کند.
+    </audio>
+  </div>
 </body>
 </html>

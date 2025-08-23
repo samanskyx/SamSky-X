@@ -2,98 +2,51 @@
 <html lang="fa">
 <head>
   <meta charset="UTF-8">
-  <title>🎶 هدیه خاص</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Player</title>
   <style>
     body {
-      background: linear-gradient(135deg, #ffafbd, #ffc3a0);
-      font-family: "Tahoma", sans-serif;
+      margin: 0;
+      background: #000;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       height: 100vh;
-      margin: 0;
       color: white;
-      text-align: center;
+      font-family: sans-serif;
     }
-
-    .player {
-      background: rgba(0,0,0,0.5);
-      padding: 30px;
-      border-radius: 25px;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.4);
-      width: 320px;
-    }
-
-    .cover-container {
-      width: 200px;
-      height: 200px;
-      margin: 0 auto 20px auto;
-      border-radius: 50%;
-      overflow: hidden;
-      border: 5px solid rgba(255,255,255,0.5);
-      animation: spin 0s linear infinite;
-    }
-
-    .cover-container.playing {
-      animation: spin 5s linear infinite;
-    }
-
     .cover {
+      width: 80vmin;   /* همیشه متناسب با صفحه */
+      height: 80vmin;
+      border-radius: 50%; /* دایره‌ای */
+      overflow: hidden;
+      animation: spin 20s linear infinite; /* چرخش آهسته */
+      box-shadow: 0 0 40px rgba(255,255,255,0.3);
+    }
+    .cover img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
-
-    audio {
-      width: 100%;
-      outline: none;
-      margin-top: 20px;
-    }
-
-    .message {
-      margin-top: 20px;
-      font-size: 18px;
-      font-weight: bold;
-      line-height: 1.5;
-    }
-
     @keyframes spin {
       from { transform: rotate(0deg); }
       to { transform: rotate(360deg); }
     }
+    audio {
+      margin-top: 20px;
+      width: 80%;
+      max-width: 400px;
+    }
   </style>
 </head>
 <body>
-  <div class="player">
-    <div class="cover-container" id="cover-container">
-      <img src="cover.jpg" alt="کاور موزیک" class="cover">
-    </div>
-    <h2>🎧 موزیک من</h2>
-    <audio id="audio" controls>
-      <source src="music.mp3" type="audio/mpeg">
-      مرورگر شما از پخش موزیک پشتیبانی نمی‌کند.
-    </audio>
-    <div class="message">
-      💖 این آهنگ رو با تمام وجودم تقدیمت می‌کنم<br>
-      امیدوارم هر بار که می‌شنوی، یاد من بیفتی 🌹
-    </div>
+  <div class="cover">
+    <img src="cover.jpg" alt="Album Cover">
   </div>
-
-  <script>
-    const audio = document.getElementById("audio");
-    const coverContainer = document.getElementById("cover-container");
-
-    audio.addEventListener("play", () => {
-      coverContainer.classList.add("playing");
-    });
-
-    audio.addEventListener("pause", () => {
-      coverContainer.classList.remove("playing");
-    });
-
-    audio.addEventListener("ended", () => {
-      coverContainer.classList.remove("playing");
-    });
-  </script>
+  <audio controls>
+    <source src="music.mp3" type="audio/mpeg">
+    مرورگر شما از پخش موزیک پشتیبانی نمی‌کند.
+  </audio>
 </body>
 </html>

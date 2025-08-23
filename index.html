@@ -3,71 +3,49 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Spotify Style Player</title>
+  <title>Animated GIF Player</title>
   <style>
     body {
       margin: 0;
-      background: #121212;
-      color: #fff;
-      font-family: sans-serif;
+      background: #000;
       display: flex;
       flex-direction: column;
+      justify-content: center;
       align-items: center;
-      min-height: 100vh;
+      height: 100vh;
+      font-family: sans-serif;
     }
     .cover {
-      width: 100%;
-      max-width: 600px;
-      margin-top: 20px;
-      box-shadow: 0 0 30px rgba(0,0,0,0.6);
+      width: 80vmin;   /* تقریباً نصف صفحه یا بیشتر */
+      height: 80vmin;
+      border-radius: 50%;
+      overflow: hidden;
+      animation: spin 20s linear infinite;
+      box-shadow: 0 0 40px rgba(255,255,255,0.3);
     }
     .cover img {
       width: 100%;
-      height: auto;
-      display: block;
+      height: 100%;
+      object-fit: cover;
     }
-    .info {
-      text-align: center;
-      margin: 15px 0;
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
     }
-    .info h2 {
-      margin: 0;
-      font-size: 1.5rem;
-    }
-    .info p {
-      margin: 5px 0 0;
-      font-size: 1rem;
-      color: #aaa;
-    }
-    .player {
-      width: 90%;
-      max-width: 500px;
-      margin-top: auto;
-      margin-bottom: 30px;
-      background: #181818;
-      border-radius: 12px;
-      padding: 15px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-    }
-    .player audio {
-      width: 100%;
-      outline: none;
+    audio {
+      margin-top: 20px;
+      width: 80%;
+      max-width: 400px;
     }
   </style>
 </head>
 <body>
   <div class="cover">
-    <img src="cover.jpg" alt="Album Cover">
+    <img src="cover.gif" alt="Animated Album Cover">
   </div>
-  <div class="info">
-    <h2>اسم آهنگ</h2>
-    <p>نام آرتیست</p>
-  </div>
-  <div class="player">
-    <audio controls>
-      <source src="music.mp3" type="audio/mpeg">
-      مرورگر شما از پخش موزیک پشتیبانی نمی‌کند.
-    </audio>
-  </div>
+  <audio controls>
+    <source src="music.mp3" type="audio/mpeg">
+    مرورگر شما از پخش موزیک پشتیبانی نمی‌کند.
+  </audio>
 </body>
 </html>

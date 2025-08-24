@@ -5,7 +5,7 @@
   <title>🎉 تولدت مبارک 🎉</title>
   <style>
     body {
-      font-family: sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       text-align: center;
       background: linear-gradient(135deg, #ffdde1, #ee9ca7);
       color: #333;
@@ -15,24 +15,40 @@
       background: white;
       padding: 30px;
       border-radius: 20px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-      max-width: 400px;
+      box-shadow: 0 5px 25px rgba(0,0,0,0.3);
+      max-width: 450px;
       margin: auto;
+      transition: transform 0.3s;
+    }
+    .card:hover {
+      transform: scale(1.03);
     }
     img {
       width: 100%;
       border-radius: 15px;
-    }
-    audio {
-      margin-top: 20px;
-      width: 100%;
-    }
-    h1 {
       margin-bottom: 20px;
     }
+    h1 {
+      margin-bottom: 15px;
+      color: #ff3399;
+    }
     p {
-      margin-top: 15px;
       font-size: 1.1em;
+      margin-bottom: 25px;
+    }
+    .button {
+      display: inline-block;
+      background: #ff6699;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s, transform 0.2s;
+    }
+    .button:hover {
+      background: #ff3385;
+      transform: scale(1.05);
     }
   </style>
 </head>
@@ -40,11 +56,10 @@
   <div class="card">
     <h1>🎂 تولدت مبارک دخترخاله عزیزم 🎂</h1>
     <img src="cover.jpg" alt="Birthday Cover">
-    <p>امیدوارم سال جدید زندگیت پر از خوشحالی و موفقیت باشه 💖</p>
-    <audio controls>
-      <source src="https://docs.google.com/uc?export=download&id=1T-FqM6UAElLctW06swgr41n625ADmRux" type="audio/mpeg">
-      مرورگر شما از پخش موزیک پشتیبانی نمی‌کند.
-    </audio>
+    <p>امیدوارم سال جدید زندگیت پر از شادی، موفقیت و لحظات فوق‌العاده باشه! 💖</p>
+    <a class="button" href="https://drive.google.com/file/d/1T-FqM6UAElLctW06swgr41n625ADmRux/view?usp=sharing" target="_blank">
+      🎵 گوش دادن به آهنگ تولد 🎵
+    </a>
   </div>
 </body>
 </html>

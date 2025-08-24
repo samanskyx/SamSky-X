@@ -7,24 +7,24 @@
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       text-align: center;
-      background: linear-gradient(135deg, #ffdde1, #ee9ca7);
-      color: #333;
+      background: #000000; /* بکگراند مشکی */
+      color: #ffffff; /* متن سفید */
       padding: 50px;
       overflow-x: hidden;
     }
 
-    /* کارت با انیمیشن ورود */
     .card {
-      background: white;
+      background: #111111; /* کارت کمی تیره‌تر */
       padding: 30px;
       border-radius: 20px;
-      box-shadow: 0 5px 25px rgba(0,0,0,0.3);
+      box-shadow: 0 5px 25px rgba(0,0,0,0.5);
       max-width: 450px;
       margin: auto;
       opacity: 0;
       transform: translateY(50px);
       animation: slideUp 1s forwards;
     }
+
     @keyframes slideUp {
       to {
         opacity: 1;
@@ -33,75 +33,4 @@
     }
 
     img {
-      width: 100%;
-      border-radius: 15px;
-      margin-bottom: 20px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    }
-
-    h1 {
-      margin-bottom: 15px;
-      color: #ff3399;
-    }
-
-    p {
-      font-size: 1.1em;
-      margin-bottom: 25px;
-    }
-
-    /* دکمه آبی شیک */
-    .button {
-      display: inline-block;
-      background: #3399ff;
-      color: white;
-      padding: 12px 25px;
-      border-radius: 12px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background 0.3s, transform 0.2s;
-    }
-    .button:hover, .button:active {
-      background: #007acc;
-      transform: scale(1.05);
-    }
-
-    /* Confetti */
-    .confetti {
-      position: fixed;
-      width: 10px;
-      height: 10px;
-      background-color: #ffcc00;
-      z-index: 9999;
-      top: -10px;
-      animation: fall 3s linear infinite;
-    }
-    @keyframes fall {
-      to {
-        transform: translateY(100vh) rotate(360deg);
-      }
-    }
-  </style>
-</head>
-<body>
-  <div class="card">
-    <h1>🎂 تولدت مبارک دخترخاله عزیزم 🎂</h1>
-    <img src="cover.jpg" alt="Birthday Cover">
-    <p>امیدوارم سال جدید زندگیت پر از شادی، موفقیت و لحظات فوق‌العاده باشه! 💖</p>
-    <a class="button" href="https://drive.google.com/file/d/1T-FqM6UAElLctW06swgr41n625ADmRux/view?usp=sharing" target="_blank">
-      🎵 گوش دادن به آهنگ تولد 🎵
-    </a>
-  </div>
-
-  <script>
-    // تولید Confetti ساده
-    for(let i=0; i<30; i++){
-      let conf = document.createElement('div');
-      conf.className = 'confetti';
-      conf.style.left = Math.random() * 100 + 'vw';
-      conf.style.backgroundColor = `hsl(${Math.random()*360}, 70%, 50%)`;
-      conf.style.animationDuration = 2 + Math.random()*2 + 's';
-      document.body.appendChild(conf);
-    }
-  </script>
-</body>
-</html>
+      wi

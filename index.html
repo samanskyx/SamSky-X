@@ -33,4 +33,73 @@
     }
 
     img {
-      wi
+      width: 100%;
+      border-radius: 15px;
+      margin-bottom: 20px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+    }
+
+    h1 {
+      margin-bottom: 15px;
+      color: #33ccff; /* متن آبی روشن */
+    }
+
+    p {
+      font-size: 1.1em;
+      margin-bottom: 25px;
+      color: #cccccc; /* متن خاکستری روشن */
+    }
+
+    .button {
+      display: inline-block;
+      background: #3399ff;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s, transform 0.2s;
+    }
+    .button:hover, .button:active {
+      background: #007acc;
+      transform: scale(1.05);
+    }
+
+    .confetti {
+      position: fixed;
+      width: 10px;
+      height: 10px;
+      background-color: #3399ff; /* آبی */
+      z-index: 9999;
+      top: -10px;
+      animation: fall 3s linear infinite;
+    }
+    @keyframes fall {
+      to {
+        transform: translateY(100vh) rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>🎂 تولدت مبارک دخترخاله عزیزم 🎂</h1>
+    <img src="cover.jpg" alt="Birthday Cover">
+    <p>امیدوارم سال جدید زندگیت پر از شادی، موفقیت و لحظات فوق‌العاده باشه! 💖</p>
+    <a class="button" href="https://drive.google.com/file/d/1T-FqM6UAElLctW06swgr41n625ADmRux/view?usp=sharing" target="_blank">
+      🎵 گوش دادن به آهنگ تولد 🎵
+    </a>
+  </div>
+
+  <script>
+    for(let i=0; i<30; i++){
+      let conf = document.createElement('div');
+      conf.className = 'confetti';
+      conf.style.left = Math.random() * 100 + 'vw';
+      conf.style.backgroundColor = '#3399ff'; // فقط آبی
+      conf.style.animationDuration = 2 + Math.random()*2 + 's';
+      document.body.appendChild(conf);
+    }
+  </script>
+</body>
+</html>
